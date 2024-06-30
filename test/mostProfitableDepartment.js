@@ -21,28 +21,7 @@ function mostProfitableDepartment(salesDataList) {
     return mostProfitableDepartment;
 }
 
-function mostProfitableDay(salesDataList) {
-    let result = {};
-    
-    // Calculate total sales per day
-    for (let i = 0; i < salesDataList.length; i++) {
-        const day = salesDataList[i].day;
-        const sales = salesDataList[i].sales;
-        result[day] = (result[day] || 0) + sales;
-    }
 
-    // Find the day with the highest total sales
-    let mostProfitableDay = "";
-    let maxSales = 0;
-    for (const day in result) {
-        if (result[day] > maxSales) {
-            maxSales = result[day];
-            mostProfitableDay = day;
-        }
-    }
-
-    return mostProfitableDay;
-}
 
 var salesData = [
     {department : 'hardware', sales : 4500, day : 'Monday'},
@@ -88,5 +67,4 @@ var salesData2 = [
 console.log(mostProfitableDepartment(salesData));
 console.log(mostProfitableDepartment(salesData2));
 
-console.log(mostProfitableDay(salesData));
-console.log(mostProfitableDay(salesData2));
+

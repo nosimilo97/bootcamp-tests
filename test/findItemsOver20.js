@@ -9,18 +9,6 @@ function findItemsOver20(objectList) {
      return result;
    }
    
-   function findItemsOver(objectLists, threshold) {
-   let results =[];
-     for (var i=0; i< objectLists.length; i++) {
-       var items = objectLists[i];
-    var list =  items.qty;
-     if( list > threshold) {
-       results.push(items);
-     }
-     }
-     return results;
-     
-   }
    
    var itemList = [
        {name : 'apples', qty : 10},
@@ -46,6 +34,4 @@ function findItemsOver20(objectList) {
    console.log(findItemsOver20(itemList2));
    console.log(findItemsOver20(itemList3));
    
-   console.log(findItemsOver(itemList, 20));
-   console.log(findItemsOver(itemList2, 20));
-   console.log(findItemsOver(itemList3, 20));
+   
